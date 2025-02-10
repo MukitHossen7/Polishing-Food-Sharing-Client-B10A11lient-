@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
+import { MdDateRange, MdOutlineProductionQuantityLimits } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const AvailableFoods = () => {
@@ -38,7 +39,7 @@ const AvailableFoods = () => {
               name="category"
               id="category"
               value={sort}
-              className="border px-4 py-2 rounded-md bg-teal-500 text-white  hover:bg-teal-600"
+              className="border px-4 py-2 rounded-md shadow-md bg-teal-500 text-white  hover:bg-teal-600"
               onChange={(e) => setSort(e.target.value)}
             >
               <option value="">Sort By Expire Date</option>
@@ -69,7 +70,7 @@ const AvailableFoods = () => {
           {foods?.map((food) => (
             <div
               key={food._id}
-              className="rounded shadow-md p-4 flex flex-col  hover:shadow-xl transition-shadow"
+              className="rounded shadow-md p-4 flex flex-col hover:shadow-xl transition-shadow"
             >
               <img
                 src={food?.foodImg}
@@ -85,11 +86,14 @@ const AvailableFoods = () => {
                   {food?.status}
                 </p>
               </div>
-              <p className="text-gray-600 mb-1">
-                Quantity: {food?.foodQuantity}
+              <p className="text-gray-600 mb-2 text-sm">
+                {food?.additionalNotes.toString().slice(0, 35)} ...
               </p>
-              <p className="text-gray-600 mb-4">
-                Expire Date: {food?.expireDate}
+              <p className="text-gray-600 mb-1 flex gap-2 items-center">
+                <MdOutlineProductionQuantityLimits /> {food?.foodQuantity}
+              </p>
+              <p className="text-gray-600 mb-4 flex items-center gap-2">
+                <MdDateRange /> {food?.expireDate}
               </p>
 
               <div className="flex">

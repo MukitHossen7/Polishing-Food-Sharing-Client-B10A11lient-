@@ -6,7 +6,7 @@ import Scroller from "../Scroller/Scroller";
 const MainLayouts = () => {
   return (
     <div>
-      <div className=" sticky top-0 z-50 bg-white/95 backdrop:blur-md ">
+      <div className="sticky top-0 z-50 bg-white backdrop:blur-md ">
         <Scroller></Scroller>
         <Navbar></Navbar>
       </div>

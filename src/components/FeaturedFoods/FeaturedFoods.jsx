@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import { MdDateRange, MdOutlineProductionQuantityLimits } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { FadeLoader } from "react-spinners";
 
@@ -14,7 +15,7 @@ const FeaturedFoods = () => {
     queryKey: ["featured-foods"],
     queryFn: handleFeaturedFood,
   });
-
+  console.log(data);
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-screen">
@@ -22,17 +23,16 @@ const FeaturedFoods = () => {
       </div>
     );
   }
-
   return (
     <div className="w-11/12 md:w-11/12 lg:w-11/12 xl:container mx-auto pt-16 pb-14">
       <h2 className="text-2xl lg:text-4xl font-semibold text-center text-teal-600">
         Featured Foods
       </h2>
-      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {data?.map((food) => (
           <div
             key={food._id}
-            className="rounded shadow-md p-4 flex flex-col  hover:shadow-xl  bg-white  overflow-hidden hover:scale-105 transform transition duration-300 ease-in-out"
+            className="rounded-md shadow-md p-4 flex flex-col  hover:shadow-xl  bg-white  overflow-hidden hover:scale-105 transform transition duration-300 ease-in-out"
           >
             <img
               src={food?.foodImg}
@@ -48,9 +48,15 @@ const FeaturedFoods = () => {
                 {food?.status}
               </p>
             </div>
-            <p className="text-gray-600 mb-1">Quantity: {food?.foodQuantity}</p>
-            <p className="text-gray-600 mb-4">
-              Expire Date: {food?.expireDate}
+            <p className="text-gray-600 mb-2 text-sm">
+              {food?.additionalNotes.toString().slice(0, 35)} ...
+            </p>
+            <p className="text-gray-600 mb-1 flex items-center gap-2">
+              {" "}
+              <MdOutlineProductionQuantityLimits /> {food?.foodQuantity}
+            </p>
+            <p className="text-gray-600 mb-4 flex items-center gap-2">
+              <MdDateRange /> {food?.expireDate}
             </p>
 
             <div className="flex">
