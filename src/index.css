@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a.active {
+  background: linear-gradient(to right, #38b2ac, #319795);
+  font-weight: 600;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+  text-decoration: underline;
+}
+body {
+  font-family: "Inter", sans-serif;
+}
