@@ -9,6 +9,7 @@ const Navbar = () => {
     const title = {
       "/": "Home || FoodSharing",
       "/availableFoods": "Available_Foods || FoodSharing",
+      "/teams": "Teams || FoodSharing",
       "/addFood": "Add_Food || FoodSharing",
       "/manageMyFoods": "Manage_My_Foods || FoodSharing",
       "/myFoodRequest": "My_Food_Request || FoodSharing",

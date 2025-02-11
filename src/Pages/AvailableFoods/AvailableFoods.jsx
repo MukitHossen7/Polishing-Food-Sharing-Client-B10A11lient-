@@ -74,49 +74,56 @@ const AvailableFoods = () => {
             Toggle Layout
           </button>
         </div>
+        {foods?.length === 0 ? (
+          <div>
+            <h2 className="text-lg md:text-2xl text-center text-gray-700 pt-12">
+              No foods available.
+            </h2>
+          </div>
+        ) : (
+          <div
+            className={`grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-${layout} gap-6 `}
+          >
+            {foods?.map((food) => (
+              <div
+                key={food._id}
+                className="rounded-md shadow-md p-4 flex flex-col hover:shadow-xl transition-shadow"
+              >
+                <img
+                  src={food?.foodImg}
+                  alt="food"
+                  className="w-full h-52 object-cover rounded mb-4"
+                />
 
-        <div
-          className={`grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-${layout} gap-6 `}
-        >
-          {foods?.map((food) => (
-            <div
-              key={food._id}
-              className="rounded-md shadow-md p-4 flex flex-col hover:shadow-xl transition-shadow"
-            >
-              <img
-                src={food?.foodImg}
-                alt="food"
-                className="w-full h-52 object-cover rounded mb-4"
-              />
-
-              <div className="mb-2 gap-10 flex justify-between items-center">
-                <h2 className="text-lg lg:text-xl font-semibold ">
-                  {food?.foodName}
-                </h2>
-                <p className="text-green-500 bg-green-100 px-3 text-sm rounded-full">
-                  {food?.status}
+                <div className="mb-2 gap-10 flex justify-between items-center">
+                  <h2 className="text-lg lg:text-xl font-semibold ">
+                    {food?.foodName}
+                  </h2>
+                  <p className="text-green-500 bg-green-100 px-3 text-sm rounded-full">
+                    {food?.status}
+                  </p>
+                </div>
+                <p className="text-gray-600 mb-2 text-sm">
+                  {food?.additionalNotes.toString().slice(0, 40)} ...
                 </p>
-              </div>
-              <p className="text-gray-600 mb-2 text-sm">
-                {food?.additionalNotes.toString().slice(0, 40)} ...
-              </p>
-              <p className="text-gray-600 mb-1 flex gap-2 items-center">
-                <MdOutlineProductionQuantityLimits /> {food?.foodQuantity}
-              </p>
-              <p className="text-gray-600 mb-4 flex items-center gap-2">
-                <MdDateRange /> {food?.expireDate}
-              </p>
+                <p className="text-gray-600 mb-1 flex gap-2 items-center">
+                  <MdOutlineProductionQuantityLimits /> {food?.foodQuantity}
+                </p>
+                <p className="text-gray-600 mb-4 flex items-center gap-2">
+                  <MdDateRange /> {food?.expireDate}
+                </p>
 
-              <div className="flex">
-                <Link to={`/food/${food?._id}`}>
-                  <button className="mt-auto bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600">
-                    View Details
-                  </button>
-                </Link>
+                <div className="flex">
+                  <Link to={`/food/${food?._id}`}>
+                    <button className="mt-auto bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600">
+                      View Details
+                    </button>
+                  </Link>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
