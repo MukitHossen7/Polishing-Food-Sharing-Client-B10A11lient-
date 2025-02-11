@@ -19,7 +19,7 @@ const FeaturedFoods = () => {
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-screen">
-        <FadeLoader color="#2df1f7" loading={true} />
+        <FadeLoader color="#2df1f7" />
       </div>
     );
   }
@@ -37,7 +37,7 @@ const FeaturedFoods = () => {
             <img
               src={food?.foodImg}
               alt="food"
-              className="w-full h-60 object-cover rounded mb-4"
+              className="w-full h-52 object-cover rounded mb-4"
             />
 
             <div className="mb-2 gap-10 flex justify-between items-center">
@@ -49,7 +49,7 @@ const FeaturedFoods = () => {
               </p>
             </div>
             <p className="text-gray-600 mb-2 text-sm">
-              {food?.additionalNotes.toString().slice(0, 35)} ...
+              {food?.additionalNotes.toString().slice(0, 40)} ...
             </p>
             <p className="text-gray-600 mb-1 flex items-center gap-2">
               {" "}

@@ -4,11 +4,13 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import useAxiosInstance from "../../CustomHooks/useAxiosInstance";
+import { FadeLoader } from "react-spinners";
 
 const ManageMyFoods = () => {
   const { user } = useContext(AuthContext);
   const [myFoods, setMyFoods] = useState([]);
   const axiosInstance = useAxiosInstance();
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     manageMyFood();
   }, []);
@@ -18,6 +20,7 @@ const ManageMyFoods = () => {
       `/manage-my-foods?email=${user?.email}`
     );
     setMyFoods(data);
+    setLoading(false);
   };
   const handleDeleteMyFoods = async (id) => {
     Swal.fire({
@@ -43,6 +46,13 @@ const ManageMyFoods = () => {
       }
     });
   };
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <FadeLoader color="#2df1f7" />
+      </div>
+    );
+  }
   return (
     <div>
       <div className="pt-10 pb-20 w-11/12 md:w-11/12 lg:w-11/12 xl:container mx-auto">
@@ -55,9 +65,9 @@ const ManageMyFoods = () => {
               <thead>
                 <tr className="bg-teal-500 text-white">
                   <th className="px-4 py-2">Image</th>
-                  <th className="px-4 py-2">Food Name</th>
+                  <th className="px-4 py-2">Name</th>
                   <th className="px-4 py-2">Quantity</th>
-                  <th className="px-4 py-2">Pickup Location</th>
+                  <th className="px-4 py-2">Location</th>
                   <th className="px-4 py-2">Expired</th>
                   <th className="px-4 py-2">Status</th>
                   <th className="px-4 py-2">Additional Notes</th>
@@ -84,15 +94,15 @@ const ManageMyFoods = () => {
                     </td>
                     <td className="px-4 py-5 flex items-end space-x-3">
                       <Link to={`/updateFoods/${food._id}`}>
-                        <button className="text-white bg-teal-500 hover:bg-teal-600 px-3 py-1 lg:py-2 rounded-md flex items-center">
-                          <FaEdit className="mr-2" /> Update
+                        <button className="text-white  px-1 py-1 lg:py-2 rounded-md flex items-center">
+                          <FaEdit className="text-gray-800 text-lg" />
                         </button>
                       </Link>
                       <button
                         onClick={() => handleDeleteMyFoods(food._id)}
-                        className="text-white bg-red-500 hover:bg-red-600 px-3 py-1 lg:py-2 rounded-md flex items-center"
+                        className="text-white px-1 py-1 lg:py-2 rounded-md flex items-center"
                       >
-                        <FaTrash className="mr-2" /> Delete
+                        <FaTrash className="text-red-500 text-lg" />
                       </button>
                     </td>
                   </tr>

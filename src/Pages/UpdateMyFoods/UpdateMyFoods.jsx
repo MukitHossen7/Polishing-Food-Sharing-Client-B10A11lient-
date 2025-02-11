@@ -48,9 +48,9 @@ const UpdateMyFoods = () => {
   return (
     <div className="pb-20 pt-10">
       <div className="flex items-center justify-center ">
-        <div className="w-full max-w-xl bg-white rounded-lg shadow-md p-6">
+        <div className="w-full max-w-xl bg-white rounded-md shadow-md p-6">
           <h2 className="text-2xl font-bold text-teal-600 mb-6 text-center">
-            Update Food Details
+            Update Food
           </h2>
           <form className="space-y-4" onSubmit={handleUpdateForm}>
             <div>
@@ -58,13 +58,13 @@ const UpdateMyFoods = () => {
                 className="block text-gray-700 font-medium mb-1"
                 htmlFor="foodName"
               >
-                Food Name
+                Food Name<span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
                 defaultValue={food?.foodName}
                 name="foodName"
-                className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-1 focus:ring-teal-500"
                 required
               />
             </div>
@@ -74,13 +74,13 @@ const UpdateMyFoods = () => {
                 className="block text-gray-700 font-medium mb-1"
                 htmlFor="foodImage"
               >
-                Food Image URL
+                Food Image<span className="text-red-500">*</span>
               </label>
               <input
                 type="url"
                 defaultValue={food?.foodImg}
                 name="foodImage"
-                className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-1 focus:ring-teal-500"
               />
             </div>
 
@@ -89,13 +89,13 @@ const UpdateMyFoods = () => {
                 className="block text-gray-700 font-medium mb-1"
                 htmlFor="foodQuantity"
               >
-                Food Quantity
+                Food Quantity<span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
                 defaultValue={food?.foodQuantity}
                 name="foodQuantity"
-                className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-1 focus:ring-teal-500"
                 required
               />
             </div>
@@ -105,13 +105,13 @@ const UpdateMyFoods = () => {
                 className="block text-gray-700 font-medium mb-1"
                 htmlFor="pickupLocation"
               >
-                Pickup Location
+                Pickup Location<span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
                 defaultValue={food?.location}
                 name="pickupLocation"
-                className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-1 focus:ring-teal-500"
                 required
               />
             </div>
@@ -121,13 +121,13 @@ const UpdateMyFoods = () => {
                 className="block text-gray-700 font-medium mb-1"
                 htmlFor="expireDate"
               >
-                Expire Date
+                Expire Date<span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
                 defaultValue={food?.expireDate}
                 name="expireDate"
-                className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-1 focus:ring-teal-500"
                 required
               />
             </div>
@@ -137,13 +137,13 @@ const UpdateMyFoods = () => {
                 className="block text-gray-700 font-medium mb-1"
                 htmlFor="additionalNotes"
               >
-                Additional Notes
+                Additional Notes<span className="text-red-500">*</span>
               </label>
               <textarea
                 id="additionalNotes"
                 defaultValue={food?.additionalNotes}
                 name="additionalNotes"
-                className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-1 focus:ring-teal-500"
               />
             </div>
 

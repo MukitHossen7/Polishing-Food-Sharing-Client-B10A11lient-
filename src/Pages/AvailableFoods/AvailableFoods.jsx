@@ -3,13 +3,14 @@ import { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { MdDateRange, MdOutlineProductionQuantityLimits } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { FadeLoader } from "react-spinners";
 
 const AvailableFoods = () => {
   const [foods, setFoods] = useState([]);
   const [layout, setLayout] = useState(3);
   const [sort, setSort] = useState("");
   const [search, setSearch] = useState("");
-
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     axios
       .get(
@@ -19,13 +20,21 @@ const AvailableFoods = () => {
       )
       .then((response) => {
         setFoods(response.data);
-      });
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
   }, [sort, search]);
 
   const toggleLayout = () => {
     setLayout((prev) => (prev === 3 ? 2 : 3));
   };
-
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <FadeLoader color="#2df1f7" />
+      </div>
+    );
+  }
   return (
     <div className="pb-20 pt-10">
       <div className=" w-11/12 md:w-11/12 lg:w-11/12 xl:container mx-auto">
@@ -70,12 +79,12 @@ const AvailableFoods = () => {
           {foods?.map((food) => (
             <div
               key={food._id}
-              className="rounded shadow-md p-4 flex flex-col hover:shadow-xl transition-shadow"
+              className="rounded-md shadow-md p-4 flex flex-col hover:shadow-xl transition-shadow"
             >
               <img
                 src={food?.foodImg}
                 alt="food"
-                className="w-full h-60 object-cover rounded mb-4"
+                className="w-full h-52 object-cover rounded mb-4"
               />
 
               <div className="mb-2 gap-10 flex justify-between items-center">
@@ -87,7 +96,7 @@ const AvailableFoods = () => {
                 </p>
               </div>
               <p className="text-gray-600 mb-2 text-sm">
-                {food?.additionalNotes.toString().slice(0, 35)} ...
+                {food?.additionalNotes.toString().slice(0, 40)} ...
               </p>
               <p className="text-gray-600 mb-1 flex gap-2 items-center">
                 <MdOutlineProductionQuantityLimits /> {food?.foodQuantity}
