@@ -38,7 +38,7 @@ const AvailableFoods = () => {
   return (
     <div className="pb-20 pt-10">
       <div className=" w-11/12 md:w-11/12 lg:w-11/12 xl:container mx-auto">
-        <h1 className="text-2xl lg:text-3xl font-bold text-center mb-6 text-teal-600">
+        <h1 className="text-2xl lg:text-3xl font-semibold text-center mb-6 text-teal-600">
           Available Foods
         </h1>
 

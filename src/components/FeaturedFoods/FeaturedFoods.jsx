@@ -15,7 +15,6 @@ const FeaturedFoods = () => {
     queryKey: ["featured-foods"],
     queryFn: handleFeaturedFood,
   });
-  console.log(data);
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-screen">
@@ -25,10 +24,10 @@ const FeaturedFoods = () => {
   }
   return (
     <div className="w-11/12 md:w-11/12 lg:w-11/12 xl:container mx-auto pt-16 pb-14">
-      <h2 className="text-2xl lg:text-4xl font-semibold text-center text-teal-600">
+      <h2 className="text-2xl lg:text-3xl font-semibold text-center text-teal-600">
         Featured Foods
       </h2>
-      <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {data?.map((food) => (
           <div
             key={food._id}

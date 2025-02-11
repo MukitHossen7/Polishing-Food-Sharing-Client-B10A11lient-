@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Mukit Hossen",
+    "role": "Food Collector",
+    "image": "https://i.ibb.co/xKfjRXHx/475123752-122173217222272301-6558968958480057910-n.jpg",
+    "description": "Mukit has been actively collecting surplus food from restaurants and delivering it to those in need."
+  },
+  {
+    "id": 2,
+    "name": "Mim Islam",
+    "role": "Community Organizer",
+    "image": "https://i.ibb.co/pNqFSrZ/Messenger-creation-14-FC6-A52-DA4-B-4225-8-A42-14-BF2977-EA17.jpg",
+    "description": "Mim helps coordinate food donation events and ensures proper distribution to underprivileged communities."
+  },
+  {
+    "id": 3,
+    "name": "Jamil Khan",
+    "role": "Volunteer Coordinator",
+    "image": "https://i.ibb.co/SXSP2Jzh/images-22.jpg",
+    "description": "Jamil manages volunteers and ensures smooth operations in food sharing activities."
+  }
+]

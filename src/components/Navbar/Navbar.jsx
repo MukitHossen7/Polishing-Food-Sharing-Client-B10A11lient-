@@ -56,6 +56,7 @@ const Navbar = () => {
             >
               <NavLink to="/">Home</NavLink>
               <NavLink to="/availableFoods">Available Foods</NavLink>
+              <NavLink to="/teams">Teams</NavLink>
 
               {user && (
                 <div className="flex flex-col gap-2">
@@ -76,7 +77,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1 gap-6 text-base">
             <NavLink to="/">Home</NavLink>
             <NavLink to="/availableFoods">Available Foods</NavLink>
-
+            <NavLink to="/teams">Teams</NavLink>
             {user && (
               <div className="flex items-center gap-6">
                 <NavLink to="/addFood">Add Food</NavLink>

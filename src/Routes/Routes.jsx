@@ -11,6 +11,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import DetailsPage from "../Pages/DetailsPage/DetailsPage";
 import UpdateMyFoods from "../Pages/UpdateMyFoods/UpdateMyFoods";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import Team from "../Pages/Team/Team";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/availableFoods",
         element: <AvailableFoods></AvailableFoods>,
+      },
+      {
+        path: "/teams",
+        element: <Team></Team>,
       },
       {
         path: "/addFood",
