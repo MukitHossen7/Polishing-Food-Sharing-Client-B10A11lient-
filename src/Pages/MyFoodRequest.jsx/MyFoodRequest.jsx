@@ -31,7 +31,7 @@ const MyFoodRequest = () => {
         <h2 className="text-2xl lg:text-3xl font-bold text-center mb-6 text-teal-600">
           My Food Requests
         </h2>
-        {foodRequest.length === 0 && (
+        {foodRequest?.length === 0 && (
           <div className="text-center text-gray-700 text-xl lg:text-2xl">
             You haven&apos;t made any food requests yet.
           </div>

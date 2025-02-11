@@ -60,8 +60,8 @@ const Navbar = () => {
               {user && (
                 <div className="flex flex-col gap-2">
                   <NavLink to="/addFood">Add Food</NavLink>
-                  <NavLink to="/manageMyFoods">Manage My Foods</NavLink>
-                  <NavLink to="/myFoodRequest">My Food Request</NavLink>
+                  <NavLink to="/manageMyFoods">Manage Foods</NavLink>
+                  <NavLink to="/myFoodRequest">Requested Foods </NavLink>
                 </div>
               )}
             </ul>
@@ -73,15 +73,15 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 gap-8 text-base">
+          <ul className="menu menu-horizontal px-1 gap-6 text-base">
             <NavLink to="/">Home</NavLink>
             <NavLink to="/availableFoods">Available Foods</NavLink>
 
             {user && (
-              <div className="flex items-center gap-8">
+              <div className="flex items-center gap-6">
                 <NavLink to="/addFood">Add Food</NavLink>
-                <NavLink to="/manageMyFoods">Manage My Foods</NavLink>
-                <NavLink to="/myFoodRequest">My Food Request</NavLink>
+                <NavLink to="/manageMyFoods">Manage Foods</NavLink>
+                <NavLink to="/myFoodRequest">Requested Foods</NavLink>
               </div>
             )}
           </ul>
@@ -95,12 +95,12 @@ const Navbar = () => {
                 <div className="flex items-center gap-1 lg:gap-4">
                   <div className="tooltip" data-tip={`${user?.displayName}`}>
                     <img
-                      className="w-7 lg:w-10 h-7 lg:h-10 object-cover rounded-full"
+                      className="w-7 lg:w-9 h-7 lg:h-9 object-cover rounded-full"
                       src={user?.photoURL}
                     ></img>
                   </div>
                   <button onClick={handleLogOut}>
-                    <Link className="py-2 px-2 lg:px-5 text-white text-sm lg:text-lg rounded-lg bg-gradient-to-r from-teal-600 via-teal-500 to-teal-400 hover:from-teal-500 hover:via-teal-400 hover:to-teal-600 transition">
+                    <Link className="py-2 px-2 lg:px-3 text-white text-sm lg:text-lg rounded-lg bg-gradient-to-r from-teal-600 via-teal-500 to-teal-400 hover:from-teal-500 hover:via-teal-400 hover:to-teal-600 transition">
                       LogOut
                     </Link>
                   </button>
@@ -109,14 +109,14 @@ const Navbar = () => {
                 <div className="flex items-center gap-1 lg:gap-4">
                   <Link
                     to="/login"
-                    className="py-2 px-2 lg:px-5 text-white text-sm lg:text-lg rounded-lg bg-gradient-to-r from-teal-600 via-teal-500 to-teal-400 hover:from-teal-500 hover:via-teal-400 hover:to-teal-600 transition"
+                    className="py-2 px-2 lg:px-3 text-white text-sm lg:text-lg rounded-lg bg-gradient-to-r from-teal-600 via-teal-500 to-teal-400 hover:from-teal-500 hover:via-teal-400 hover:to-teal-600 transition"
                   >
                     Login
                   </Link>
 
                   <Link
                     to="/signup"
-                    className="py-2 px-2 lg:px-5 text-white text-sm lg:text-lg  rounded-lg bg-gradient-to-r from-teal-600 via-teal-500 to-teal-400 hover:from-teal-500 hover:via-teal-400 hover:to-teal-600 transition"
+                    className="py-2 px-2 lg:px-3 text-white text-sm lg:text-lg  rounded-lg bg-gradient-to-r from-teal-600 via-teal-500 to-teal-400 hover:from-teal-500 hover:via-teal-400 hover:to-teal-600 transition"
                   >
                     Signup
                   </Link>
