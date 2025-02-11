@@ -8,7 +8,7 @@ const CommunityImpact = () => {
           <h2 className="mb-4 animate-fadeIn bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-teal-600 text-2xl lg:text-3xl font-semibold text-center">
             Our Community Impact
           </h2>
-          <p className="text-lg mb-8 w-full lg:max-w-3xl mx-auto">
+          <p className="text-base md:text-lg mb-8 w-full lg:max-w-3xl mx-auto">
             Together, we’ve reduced food waste and helped hundreds of families
             access surplus food. See how our platform is changing lives!
           </p>

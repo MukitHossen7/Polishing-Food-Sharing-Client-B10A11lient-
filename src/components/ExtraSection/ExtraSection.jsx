@@ -8,7 +8,7 @@ const ExtraSection = () => {
           <h2 className="mb-4 animate-fadeIn bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-teal-600 text-2xl lg:text-3xl font-semibold">
             Why Share Food?
           </h2>
-          <p className="text-lg mb-8 w-full lg:max-w-[780px] mx-auto text-gray-800">
+          <p className="text-base md:text-lg mb-8 w-full lg:max-w-[780px] mx-auto text-gray-800">
             Join a community that reduces food waste, helps the environment, and
             makes a difference in people&apos;s lives.
           </p>
@@ -48,7 +48,7 @@ const ExtraSection = () => {
           <h2 className="mb-4 animate-fadeIn bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-teal-600 text-2xl lg:text-3xl font-semibold text-center">
             How It Works
           </h2>
-          <p className="text-lg mb-8 w-full lg:max-w-3xl mx-auto">
+          <p className="text-base md:text-lg mb-8 w-full lg:max-w-3xl mx-auto">
             Sharing food is simple and efficient. Here’s how you can start
             making a difference today!
           </p>

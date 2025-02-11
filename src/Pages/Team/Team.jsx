@@ -26,7 +26,7 @@ const Team = () => {
           <h2 className="text-2xl lg:text-3xl font-semibold text-center mb-6 text-teal-600">
             Meet Our Volunteers
           </h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg mb-8 max-w-2xl mx-auto">
             Our dedicated volunteers play a crucial role in collecting and
             distributing food to those in need. Join us in making a difference!
           </p>
