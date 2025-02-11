@@ -23,7 +23,6 @@ const AddFood = () => {
       });
     },
   });
-  console.log(user);
   const handleAddFood = async (e) => {
     e.preventDefault();
     const foodName = e.target.foodName.value;
