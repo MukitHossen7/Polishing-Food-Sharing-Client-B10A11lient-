@@ -23,6 +23,7 @@ const AddFood = () => {
       });
     },
   });
+  console.log(user);
   const handleAddFood = async (e) => {
     e.preventDefault();
     const foodName = e.target.foodName.value;
@@ -58,7 +59,7 @@ const AddFood = () => {
   return (
     <div>
       <div className="py-20 flex items-center justify-center p-6">
-        <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-3xl">
+        <div className="bg-white shadow-md rounded-lg p-6 w-full max-w-3xl">
           <h2 className="text-2xl font-bold text-teal-500 text-center mb-6">
             Add Food
           </h2>
@@ -69,13 +70,13 @@ const AddFood = () => {
                 htmlFor="foodName"
                 className="block text-gray-700 font-medium mb-1"
               >
-                Food Name
+                Food Name<span className="text-red-600">*</span>
               </label>
               <input
                 type="text"
                 name="foodName"
                 placeholder="Enter food name"
-                className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-teal-500"
                 required
               />
             </div>
@@ -86,13 +87,13 @@ const AddFood = () => {
                 htmlFor="foodImage"
                 className="block text-gray-700 font-medium mb-1"
               >
-                Food Image URL
+                Food Image<span className="text-red-600">*</span>
               </label>
               <input
                 type="url"
                 name="photo"
                 placeholder="Enter image URL"
-                className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-teal-500"
                 required
               />
             </div>
@@ -103,13 +104,13 @@ const AddFood = () => {
                 htmlFor="foodQuantity"
                 className="block text-gray-700 font-medium mb-1"
               >
-                Food Quantity
+                Food Quantity<span className="text-red-600">*</span>
               </label>
               <input
                 type="text"
                 name="foodQuantity"
                 placeholder="Enter quantity"
-                className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-teal-500"
                 required
               />
             </div>
@@ -120,13 +121,13 @@ const AddFood = () => {
                 htmlFor="pickupLocation"
                 className="block text-gray-700 font-medium mb-1"
               >
-                Pickup Location
+                Pickup Location<span className="text-red-600">*</span>
               </label>
               <input
                 type="text"
                 name="pickupLocation"
                 placeholder="Enter pickup location"
-                className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-teal-500"
                 required
               />
             </div>
@@ -137,13 +138,13 @@ const AddFood = () => {
                   htmlFor="expireDate"
                   className="block text-gray-700 font-medium mb-1"
                 >
-                  Expire Date
+                  Expire Date<span className="text-red-600">*</span>
                 </label>
 
                 <DatePicker
                   selected={startDate}
                   onChange={(date) => setStartDate(date)}
-                  className="w-full lg:w-80 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full lg:w-80 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-teal-500"
                   required
                 />
               </div>
@@ -154,13 +155,13 @@ const AddFood = () => {
                   htmlFor="expireDate"
                   className="block text-gray-700 font-medium mb-1"
                 >
-                  Food Status
+                  Food Status<span className="text-red-600">*</span>
                 </label>
                 <input
                   defaultValue="Available"
                   readOnly
                   name="status"
-                  className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-teal-500"
                   required
                 />
               </div>
@@ -172,13 +173,13 @@ const AddFood = () => {
                 htmlFor="additionalNotes"
                 className="block text-gray-700 font-medium mb-1"
               >
-                Additional Notes
+                Additional Notes<span className="text-red-600">*</span>
               </label>
               <textarea
                 id="additionalNotes"
                 name="additionalNotes"
                 placeholder="Enter any additional notes"
-                className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-teal-500"
                 rows="3"
               ></textarea>
             </div>

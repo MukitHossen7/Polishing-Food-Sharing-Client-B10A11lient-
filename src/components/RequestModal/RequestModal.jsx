@@ -66,7 +66,7 @@ const RequestModal = ({ isOpen, onClose, food }) => {
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
+          className="absolute top-3 right-3 text-gray-800 hover:text-gray-800"
         >
           ✖
         </button>
@@ -81,66 +81,66 @@ const RequestModal = ({ isOpen, onClose, food }) => {
             {/* Food Name */}
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700">
-                Food Name
+                Food Name<span className="text-red-600">*</span>
               </label>
               <input
                 type="text"
                 value={foodName}
                 name="food_name"
                 readOnly
-                className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-teal-500"
               />
             </div>
             {/* Food Image */}
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700">
-                Food Image
+                Food Image<span className="text-red-600">*</span>
               </label>
               <input
                 type="text"
                 value={foodImg}
                 name="food_image"
                 readOnly
-                className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-teal-500"
               />
             </div>
             {/* Food ID */}
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700">
-                Food ID
+                Food ID<span className="text-red-600">*</span>
               </label>
               <input
                 type="text"
                 value={_id}
                 name="food_id"
                 readOnly
-                className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-teal-500"
               />
             </div>
             {/* Donator Information */}
             <div className="mb-4 grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700">
-                  Donator Name
+                  Donator Name<span className="text-red-600">*</span>
                 </label>
                 <input
                   type="text"
                   value={donator?.donatorName}
                   name="donator_name"
                   readOnly
-                  className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-teal-500"
                 />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700">
-                  Donator Email
+                  Donator Email<span className="text-red-600">*</span>
                 </label>
                 <input
                   type="text"
                   value={donator?.donatorEmail}
                   name="donator_email"
                   readOnly
-                  className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-teal-500"
                 />
               </div>
             </div>
@@ -148,26 +148,26 @@ const RequestModal = ({ isOpen, onClose, food }) => {
             <div className="mb-4 grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700">
-                  User Email
+                  User Email<span className="text-red-600">*</span>
                 </label>
                 <input
                   type="text"
                   value={user?.email}
                   name="user_email"
                   readOnly
-                  className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-teal-500"
                 />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700">
-                  Pickup Location
+                  Pickup Location<span className="text-red-600">*</span>
                 </label>
                 <input
                   type="text"
                   value={location}
                   name="pickup_location"
                   readOnly
-                  className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-teal-500"
                 />
               </div>
             </div>
@@ -175,40 +175,40 @@ const RequestModal = ({ isOpen, onClose, food }) => {
             <div className="mb-4 grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700">
-                  Expire Date
+                  Expire Date<span className="text-red-600">*</span>
                 </label>
                 <input
                   type="text"
                   value={expireDate}
                   name="expire_date"
                   readOnly
-                  className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-teal-500"
                 />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700">
-                  Request Date
+                  Request Date<span className="text-red-600">*</span>
                 </label>
                 <input
                   type="text"
                   value={currentDate}
                   name="request_date"
                   readOnly
-                  className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-teal-500"
                 />
               </div>
             </div>
             {/* Additional Notes */}
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700">
-                Additional Notes
+                Additional Notes<span className="text-red-600">*</span>
               </label>
               <textarea
                 rows="2"
                 name="additional_notes"
                 defaultValue={additionalNotes}
                 placeholder="Enter any additional notes here..."
-                className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-teal-500"
               ></textarea>
             </div>
             {/* Request Button */}

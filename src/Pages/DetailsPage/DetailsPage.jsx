@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 import RequestModal from "../../components/RequestModal/RequestModal";
 import { useParams } from "react-router-dom";
 import useAxiosInstance from "../../CustomHooks/useAxiosInstance";
-
+import { MdOutlineProductionQuantityLimits } from "react-icons/md";
+import { FaCalendarAlt, FaMapMarkerAlt, FaTimesCircle } from "react-icons/fa";
+import { FaCheckCircle } from "react-icons/fa";
 const DetailsPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [food, setFood] = useState({});
@@ -51,25 +53,36 @@ const DetailsPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {/* Left Column: Food Details */}
               <div className="space-y-2">
-                <p>
-                  <span className="font-semibold ">Quantity:</span>{" "}
-                  {foodQuantity}
+                <p className="flex items-center gap-2">
+                  <span className="font-semibold ">
+                    <MdOutlineProductionQuantityLimits />
+                  </span>{" "}
+                  <span>{foodQuantity}</span>
                 </p>
-                <p>
-                  <span className="font-semibold ">Food Status:</span> {status}
+                <p className="flex items-center gap-2">
+                  <span className="font-semibold ">
+                    {status === "Available" ? (
+                      <FaCheckCircle className="text-green-500" />
+                    ) : (
+                      <FaTimesCircle className="text-red-500" />
+                    )}
+                  </span>{" "}
+                  {status}
                 </p>
-                <p>
-                  <span className="font-semibold ">Pickup Location:</span>{" "}
+                <p className="flex items-center gap-2">
+                  <span className="font-semibold ">
+                    <FaMapMarkerAlt />
+                  </span>{" "}
                   {location}
                 </p>
-                <p>
-                  <span className="font-semibold ">Expire Date:</span>{" "}
+                <p className="flex gap-2 items-center">
+                  <span className="font-semibold ">
+                    {" "}
+                    <FaCalendarAlt />
+                  </span>{" "}
                   {expireDate}
                 </p>
-                <p>
-                  <span className="font-semibold ">Additional Notes:</span>{" "}
-                  {additionalNotes}
-                </p>
+                <p>{additionalNotes}</p>
               </div>
 
               {/* Right Column: Donator Information */}
