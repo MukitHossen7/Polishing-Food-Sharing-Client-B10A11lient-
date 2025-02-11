@@ -100,7 +100,7 @@ const Navbar = () => {
                     ></img>
                   </div>
                   <button onClick={handleLogOut}>
-                    <Link className="py-2 px-2 lg:px-3 text-white text-sm lg:text-lg rounded-lg bg-gradient-to-r from-teal-600 via-teal-500 to-teal-400 hover:from-teal-500 hover:via-teal-400 hover:to-teal-600 transition">
+                    <Link className="py-2 px-2 lg:px-3 text-white text-sm lg:text-lg rounded bg-gradient-to-r from-teal-600 via-teal-500 to-teal-400 hover:from-teal-500 hover:via-teal-400 hover:to-teal-600 transition">
                       LogOut
                     </Link>
                   </button>
@@ -109,14 +109,14 @@ const Navbar = () => {
                 <div className="flex items-center gap-1 lg:gap-4">
                   <Link
                     to="/login"
-                    className="py-2 px-2 lg:px-3 text-white text-sm lg:text-lg rounded-lg bg-gradient-to-r from-teal-600 via-teal-500 to-teal-400 hover:from-teal-500 hover:via-teal-400 hover:to-teal-600 transition"
+                    className="py-1 px-2 lg:px-3 text-white text-sm lg:text-lg rounded bg-gradient-to-r from-teal-600 via-teal-500 to-teal-400 hover:from-teal-500 hover:via-teal-400 hover:to-teal-600 transition"
                   >
                     Login
                   </Link>
 
                   <Link
                     to="/signup"
-                    className="py-2 px-2 lg:px-3 text-white text-sm lg:text-lg  rounded-lg bg-gradient-to-r from-teal-600 via-teal-500 to-teal-400 hover:from-teal-500 hover:via-teal-400 hover:to-teal-600 transition"
+                    className="py-1 px-2 lg:px-3 text-white text-sm lg:text-lg  rounded bg-gradient-to-r from-teal-600 via-teal-500 to-teal-400 hover:from-teal-500 hover:via-teal-400 hover:to-teal-600 transition"
                   >
                     Signup
                   </Link>

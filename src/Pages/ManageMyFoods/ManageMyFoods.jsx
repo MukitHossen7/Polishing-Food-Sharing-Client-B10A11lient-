@@ -56,7 +56,7 @@ const ManageMyFoods = () => {
   return (
     <div>
       <div className="pt-10 pb-20 w-11/12 md:w-11/12 lg:w-11/12 xl:container mx-auto">
-        <div className="max-w-7xl mx-auto bg-white shadow-sm  rounded-lg p-5">
+        <div className="max-w-7xl mx-auto bg-white shadow-md  rounded-md p-5">
           <h2 className="text-2xl font-bold text-teal-600 mb-5">
             Manage My Foods
           </h2>

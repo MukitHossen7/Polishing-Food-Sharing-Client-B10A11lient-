@@ -17,8 +17,8 @@ const Footer = () => {
         <div className="pt-12 mx-auto w-11/12 md:w-11/12 lg:w-11/12 xl:container  ">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 row-gap-10 mb-8 items-center text-center lg:text-start lg:items-start justify-around">
             <div className="md:max-w-md lg:col-span-2">
-              <a
-                href="/"
+              <Link
+                to="/"
                 aria-label="Go home"
                 title="FoodSharing"
                 className="inline-flex items-center"
@@ -41,7 +41,7 @@ const Footer = () => {
                 <span className="ml-3 text-xl text-center font-bold tracking-wide text-white uppercase">
                   FoodSharing
                 </span>
-              </a>
+              </Link>
               <div className="mt-4 lg:max-w-sm">
                 <p className="text-sm text-gray-200">
                   A platform to share and manage food resources, reducing waste
@@ -105,7 +105,8 @@ const Footer = () => {
               <ul className="mt-2 space-y-2">
                 <li>
                   <a
-                    href="/"
+                    href="https://www.facebook.com/"
+                    target="_blank"
                     className="transition-colors duration-300 hover:text-gray-800"
                   >
                     Facebook
@@ -113,7 +114,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="/"
+                    href="https://www.instagram.com/"
+                    target="_blank"
                     className="transition-colors duration-300 hover:text-gray-800"
                   >
                     Instagram
@@ -121,7 +123,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="/"
+                    href="https://x.com/account/access"
+                    target="_blank"
                     className="transition-colors duration-300 hover:text-gray-800"
                   >
                     Twitter
@@ -129,7 +132,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="/"
+                    href="https://www.linkedin.com/"
+                    target="_blank"
                     className="transition-colors duration-300 hover:text-gray-800"
                   >
                     LinkedIn

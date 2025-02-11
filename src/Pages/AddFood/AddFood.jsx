@@ -58,7 +58,7 @@ const AddFood = () => {
   return (
     <div>
       <div className="py-20 flex items-center justify-center p-6">
-        <div className="bg-white shadow-md rounded-lg p-6 w-full max-w-3xl">
+        <div className="bg-white shadow-md rounded-md p-6 w-full max-w-3xl">
           <h2 className="text-2xl font-bold text-teal-500 text-center mb-6">
             Add Food
           </h2>
@@ -201,7 +201,7 @@ const AddFood = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-teal-500 text-white font-medium py-2 rounded-lg hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full bg-teal-500 text-white font-medium py-2 rounded hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500"
             >
               Add Food
             </button>

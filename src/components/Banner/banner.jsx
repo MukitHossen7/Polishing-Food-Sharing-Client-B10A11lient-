@@ -23,14 +23,14 @@ const Banner = () => {
           {user ? (
             <Link
               to="/availableFoods"
-              className="mt-6 inline-block bg-teal-600 text-white py-3 px-8 rounded-lg shadow-lg hover:bg-teal-700 transition duration-300"
+              className="mt-6 inline-block bg-teal-600 text-white py-3 px-8 rounded shadow-lg hover:bg-teal-700 transition duration-300"
             >
               Visit All Foods
             </Link>
           ) : (
             <Link
               to="/login"
-              className="mt-6 inline-block bg-teal-600 text-white py-3 px-8 rounded-lg shadow-lg hover:bg-teal-700 transition duration-300"
+              className="mt-6 inline-block bg-teal-600 text-white py-3 px-8 rounded shadow-lg hover:bg-teal-700 transition duration-300"
             >
               join Now
             </Link>

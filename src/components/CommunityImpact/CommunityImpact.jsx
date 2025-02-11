@@ -3,9 +3,9 @@ import CountUp from "react-countup";
 const CommunityImpact = () => {
   return (
     <div>
-      <div className="py-8 lg:py-12">
+      <div className="pt-12 lg:pt-16">
         <div className="mx-auto w-11/12 md:w-11/12 lg:w-11/12 xl:container text-center">
-          <h2 className="  mb-4 animate-fadeIn bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-teal-600 text-2xl lg:text-3xl font-semibold text-center">
+          <h2 className="mb-4 animate-fadeIn bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-teal-600 text-2xl lg:text-3xl font-semibold text-center">
             Our Community Impact
           </h2>
           <p className="text-lg mb-8 w-full lg:max-w-3xl mx-auto">
