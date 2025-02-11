@@ -12,7 +12,7 @@ const CommunityImpact = () => {
             Together, we’ve reduced food waste and helped hundreds of families
             access surplus food. See how our platform is changing lives!
           </p>
-          <div className="grid gap-6 grid-cols-1 md:grid-cols-3">
+          <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <div className="bg-white text-teal-700 rounded-lg shadow-lg p-6 transform transition duration-300 hover:scale-105 hover:bg-teal-100">
               <h3 className="text-xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-teal-600">
                 <CountUp end={1000} />+ Meals Shared

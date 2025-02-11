@@ -3,6 +3,7 @@ import Banner from "../../components/Banner/banner";
 import FeaturedFoods from "../../components/FeaturedFoods/FeaturedFoods";
 import CommunityImpact from "../../components/CommunityImpact/CommunityImpact";
 import OurDestination from "../../components/OurDestination/OurDestination";
+import ExtraSection from "../../components/ExtraSection/ExtraSection";
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
           </Link>
         </div>
         <CommunityImpact></CommunityImpact>
+        <ExtraSection></ExtraSection>
         <OurDestination></OurDestination>
       </div>
     </div>
