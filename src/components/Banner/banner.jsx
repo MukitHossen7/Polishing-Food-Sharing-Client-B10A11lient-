@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
-import bannerImg from "../../assets/banner.jpg";
+import bannerImg3 from "../../assets/img2.png";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 const Banner = () => {
+  const { user } = useContext(AuthContext);
   return (
     <div className="mt-10">
       <div
         className="relative h-96 lg:h-[450px] bg-cover bg-center transition-all duration-500 ease-in-out hover:h-[600px]"
         style={{
-          backgroundImage: `url(${bannerImg})`,
+          backgroundImage: `url(${bannerImg3})`,
         }}
       >
         <div className="absolute inset-0 bg-black opacity-50 transition-all duration-500 ease-in-out"></div>
@@ -17,12 +20,21 @@ const Banner = () => {
           <p className="text-lg lg:text-xl mt-4">
             Sharing food for a better world. Join us today!
           </p>
-          <Link
-            to="/login"
-            className="mt-6 inline-block bg-teal-600 text-white py-3 px-8 rounded-lg shadow-lg hover:bg-teal-700 transition duration-300"
-          >
-            join Now
-          </Link>
+          {user ? (
+            <Link
+              to="/availableFoods"
+              className="mt-6 inline-block bg-teal-600 text-white py-3 px-8 rounded-lg shadow-lg hover:bg-teal-700 transition duration-300"
+            >
+              Visit All Foods
+            </Link>
+          ) : (
+            <Link
+              to="/login"
+              className="mt-6 inline-block bg-teal-600 text-white py-3 px-8 rounded-lg shadow-lg hover:bg-teal-700 transition duration-300"
+            >
+              join Now
+            </Link>
+          )}
         </div>
       </div>
     </div>

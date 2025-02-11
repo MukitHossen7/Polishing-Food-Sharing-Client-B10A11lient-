@@ -30,7 +30,7 @@ const Navbar = () => {
     });
   };
   return (
-    <div className="text-black pt-6 ">
+    <div className="text-black pt-6">
       <div className="navbar w-11/12 md:w-11/12 lg:w-11/12 xl:container mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
